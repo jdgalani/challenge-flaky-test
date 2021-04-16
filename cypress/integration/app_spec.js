@@ -22,7 +22,8 @@ describe('Sign Up', () => {
     cy.get('input[type="submit"]')
       .click()
 
-    cy.get('li')
+    //Save time is between 3500 to 4500
+    cy.get('li',{ timeout : 4500 })
       .should('contain', 'Some Name - some@email.com - core - git-it')
   })
 })
